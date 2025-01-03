@@ -92,3 +92,11 @@ console.log(obj.toString());
 let words="Hello my name is pushpendra singh and I am not an terriorist. I am just an human who wants love and success a girl to sleep with to whom i can care about as much she cares about me to ";
 let arr=words.split(' ');//split(seperator,limit)<: arguments
 console.log(arr);
+
+
+//String object :-
+//toString() is not useful here it would be used in other datatypes such as no when we need to convert a  number into string
+let temp=new String("Hello World!");
+console.log(temp.length);
+console.log(temp.toLocaleLowerCase());
+console.log(temp.toUpperCase());
