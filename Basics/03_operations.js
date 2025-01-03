@@ -109,7 +109,7 @@ console.log(typeof bigNumber);
 
 //Now what does typeof return in each case
 //Number : Number
-//Sting : String
+//String : String(String object)
 //Boolean : Boolean
 //null: object
 //undefined: undefined
