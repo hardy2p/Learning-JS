@@ -18,14 +18,3 @@ const myUser={
 
 myUser.email="newEmail@gmail.com";
 // console.log(myUser.email);
-
-// Object.freeze(myUser);//Freezes any update to the object
-// myUser.age=90;
-
-//Object.seal(myUser);//Seals the object and does not allow to add or delete the properties but allows to update the properties.
-myUser.greeting=function(){
-    console.log(`Hello Sir ${this["name"]}`);
-}
-//This keyword is used ti refer to the object itself can be used with in an object scope.
-
-myUser.greeting();
