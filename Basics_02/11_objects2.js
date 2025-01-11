@@ -89,3 +89,17 @@ console.log(Object.keys(obj6));//Return all the keys in form of an array.
 console.log(Object.values(obj6));//Returns all the values in form of an array.
 console.log(Object.entries(obj6));//Returns an array of arrays with nested array of size 2 where 0th element would be key and 1st element would be value to that 0th key.
 console.log(obj6.hasOwnProperty('keyY'));
+
+
+//Object Destructuring
+
+const tinderUser={
+    userName:"Pushpendra",
+    age:25,
+    userEmail:"pushp@gmail.com"
+}
+//We can directly access the tinderUser properties using this formatting
+
+const {userName:name,age}=tinderUser;
+console.log(name);//
+console.log(age);
