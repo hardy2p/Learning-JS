@@ -30,6 +30,11 @@ arr.forEach((value,index,[])=>{
 })
 
 
+const temp=[1,2,3,4,5];
+let func=(value,index)=> console.log(`Value at ${index}th index is ${value}`);
+temp.forEach(func);
+
+
 //For in loop
 //for in loop is used to iterater over the objects in js 
 
@@ -49,5 +54,18 @@ forOf loop is used to iterate over the arrays,strings ,map and set in js
 forin loop are specifically designed to iterate over the object in js which is not an itarable as it do not have symbol.iterator funcion in it.
 Object can be made itareble by addding an funciton to  it 
 forEach loop is also specifically desinged for arrays
-
+for in loop can also used to iterate over arrays here keys are 0 ,1 , 2 means index of the array
 */
+
+
+const languages = [
+    { languageName: 'JavaScript', extension: 'js' },
+    { languageName: 'Python', extension: 'py' },
+    { languageName: 'C++', extension: 'cpp' },
+    { languageName: 'Java', extension: 'java' },
+    { languageName: 'Ruby', extension: 'rb' }
+];
+
+languages.forEach((obj)=>{
+    console.log(`${obj['languageName']}: ${obj['extension']}`);
+})
