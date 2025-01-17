@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Dom element</title>
+    <style>
+        body{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+        <div style="font-size: 3em; font-weight: bold;">
+            Chai and Code
+        </div>
+    </div>  -->
+</body>
+<script>
+    //Create a div element in body now 
+   const div= document.createElement('div');
+   console.log(div);
+   div.className="main";
+   div.id=Math.round(Math.random()*10+1);
+   div.setAttribute('title','mainTitle');
+   div.style.backgroundColor="green";
+   div.style.padding="12px";
+   //div.innerText="Pushpendra Singh";//It OverWrites the value
+   const addText=document.createTextNode("Pushpendra singh");
+   div.append(addText)
+   document.body.append(div);
+   //Now attach it to screen
+</script>
+</html>
