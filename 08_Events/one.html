@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>html Events </title>
+    </head>
+    <body style="background-color: #414141; color: aliceblue;">
+        <h2>Amazing image</h2>
+        <div >
+            <ul id="images">
+                <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+                <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+                <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+                <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+                <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+                <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+            </ul>
+       </div>
+    </body>
+    <script>
+        // document.getElementById('owl').onclick=()=>{
+        //     alert("On Click function called and owl is clicked");
+        // }
+        //This method doest give too many options to developer
+
+        
+        //Attach events
+        //J query On wad therer
+
+        // document.getElementById('owl').addEventListener('click', (e)=>{
+        //     console.log(e);
+        //     //This is called an event object which gives us multiple things such as timeStamp , typeOfEvent(Pointer In our case), Coordinate of event happening
+        //     //Study about 
+        //     // type, timestamp, defaultPrevented
+        //     // target, toElement, srcElement, currentTarget,
+        //     // clientX, clientY, screenX, screenY
+        //     // altKey, ctrlKey, shiftKey, keyCode
+            
+        //     //Type of event 
+        //     console.log(e.type);
+        //     console.log(e.target);//Return element on the dom on which event is occuring in out case <img> tag
+        //     console.log(e.timeStamp);//Return time in milsecond in relative to the time to which page is loaded
+        //     //console.log(e.toElement);//Work similar as target event but for mouseover events
+        //     console.log(e.clientX);//Return position of click on based of viewPort
+        //     console.log(e.clientY);//Return positon of click based on viewPort.
+        //     console.log(e.screenX);//Return postion on click in relative to screen not the viewport
+        //     console.log(e.screenY);//Y postion accoring to the scrren 
+
+
+        // },false)
+
+        // document.getElementById('images').addEventListener('click',(e)=>{
+        //     console.log("Images clicked");
+        // },false);
+
+        // document.getElementById('owl').addEventListener('click',(e)=>{
+        //     console.log('Owl clicked');
+        //     e.stopPropagation();//Stops bubbeling
+        // },false);
+
+        //Event bubbeling mode is on by default(false)
+
+        //Remove element when it is being clicked 
+
+        document.getElementById('images').addEventListener('click',(e)=>{
+            const ele=e.target.parentNode;//Do not just remove img tag remove whole li tag
+            console.log(e.target.tagName);//Only delete image tag one 
+            if(e.target.tagName === 'IMG'){
+                ele.remove();
+            }
+        })
+
+
+    </script>
+</html>
