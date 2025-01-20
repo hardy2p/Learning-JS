@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading">Chai aur code</h1>
+    <button id="btn">Stop</button>
+</body>
+<script>
+    // console.log("First");
+    // setTimeout(()=>{
+    //     console.log('Second');
+    // },2000);
+    // //SetTimeOut(handelr , timeinms)
+    // console.log("Third");
+    const sayPushpa=()=>{
+        console.log("Pushpa ! Jhukega Nhi Salla");
+    }
+
+    const changeText=()=>{
+        document.querySelector('#heading').innerHTML=`Changes the text`;
+    }
+    const temp=setTimeout(changeText,2000);
+
+    //There is a clearTimeout function also there
+    document.getElementById('btn').addEventListener('click',()=>{
+        clearTimeout(temp);
+        console.log('Stopped');
+    });
+</script>
+</html>
